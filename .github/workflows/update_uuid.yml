@@ -37,4 +37,6 @@ jobs:
 
       - name: Publish
         if: always()
-        run: nr1 nerdpack:publish
+        run: |
+          nr1 nerdpack:publish
+          nr1 catalog:submit
