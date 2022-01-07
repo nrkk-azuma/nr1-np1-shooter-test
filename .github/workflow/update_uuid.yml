@@ -20,6 +20,7 @@ jobs:
         id: nr1
         run: |
           curl -s https://cli.nr-ext.net/installer.sh | sudo bash
+          npm install
           nr1 profiles:add --name tmp --api-key $NR_USER_KEY --region us
           nr1 nerdpack:info
 
