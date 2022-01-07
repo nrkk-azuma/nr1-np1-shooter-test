@@ -36,7 +36,13 @@ jobs:
           ref: ${{ github.head_ref }}
 
       - name: Publish
+        continue-on-error: true
         if: always()
         run: |
           nr1 nerdpack:publish
+
+      - name: Publish
+        if: always()
+        run: |
+          sleep 10
           nr1 catalog:submit
