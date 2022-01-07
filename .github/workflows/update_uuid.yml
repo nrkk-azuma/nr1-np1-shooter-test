@@ -14,7 +14,6 @@ jobs:
           node-version: 12.x
 
       - name: nr1
-        continue-on-error: true
         env:
           NR_USER_KEY: ${{ secrets.NR_USER_KEY }}
         id: nr1
